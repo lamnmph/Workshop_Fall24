@@ -1,0 +1,35 @@
+{
+  "products": [
+    {
+      "id": 2,
+      "name": "new produc 0002",
+      "price": 222,
+      "description": "product description vcl",
+      "image": "https://picsum.photos/id/200/200/200"
+    },
+    {
+      "id": 3,
+      "name": "Sản phẩm đã được edit",
+      "price": 222,
+      "description": "product description vcl",
+      "image": "https://picsum.photos/id/200/200/200",
+      "isBuy": true
+    },
+    {
+      "name": "product name 123",
+      "price": 123123,
+      "description": "123132",
+      "isBuy": false,
+      "image": "http://picsum.photos/id/44/200/200",
+      "id": 4
+    },
+    {
+      "name": "product name 123",
+      "price": 123123,
+      "description": "123132",
+      "isBuy": true,
+      "image": "http://picsum.photos/id/44/200/200",
+      "id": 5
+    }
+  ]
+}
