@@ -18,7 +18,9 @@ const Aboutpage = () => {
             <div className="flex">
               <div className="flex flex-col">
                 <div className="flex justify-center text-6xl">
+                  <div className="text-green-600">
                   <PiTarget />
+                  </div>
                 </div>
                 <p className="font-bold text-3xl text-center">OUR MISSION</p>
                 <p className="text-center mt-4">
@@ -33,7 +35,9 @@ const Aboutpage = () => {
             <div className="flex">
               <div className="flex flex-col">
                 <div className="flex justify-center text-6xl">
+                <div className="text-green-600">
                   <FaRoad />
+                </div>
                 </div>
                 <p className="font-bold text-3xl text-center">OUR VISION</p>
                 <p className="text-center mt-4">
@@ -48,7 +52,9 @@ const Aboutpage = () => {
             <div className="flex">
               <div className="flex flex-col">
                 <div className="flex justify-center text-6xl">
+                <div className="text-green-600">
                   <FaBook />
+                  </div>
                 </div>
                 <p className="font-bold text-3xl text-center">OUR VALUES</p>
                 <p className="text-center mt-4">

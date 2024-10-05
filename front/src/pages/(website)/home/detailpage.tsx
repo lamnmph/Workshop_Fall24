@@ -69,7 +69,7 @@ const Detailpage = () => {
               </div>
             </div>
             <div className="flex flex-col">
-              <input type="number" value={1} className="px-1 py-1"/>
+              <input type="number" min={1} className="px-1 py-1"/>
               <button className="border-2 border-green-300">Add To Cart</button>
               <button className="border border-black-300 mt-2">+   Compare</button>
             </div>
