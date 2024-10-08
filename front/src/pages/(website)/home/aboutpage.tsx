@@ -6,10 +6,10 @@ const Aboutpage = () => {
     <>
       <div className="container mx-auto p-20">
         <img
-          src="https://s3-alpha-sig.figma.com/img/9c2f/5c30/d4db4723a6061e62a81d915b0c00bed9?Expires=1728259200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=NodqKY4zRTG0frk-Cc3oLIKV7pOblHDv4hpnapTblg5Qhd1gDHS5Vt5l51XFoO7ItHAc~1F3qxdhgbeTb7g1Azd3BpUblPsbFv3H7Z0nQ9xXTf130ZJUEEVWNFvMIB34MtDL~JgcRMOch3f5eKS2VUYzABAeX0D5rCEFJRXFeYN926pwAi3ADUVtHDFbngqkkilnE~upONmzF-5wGzU661RhjylxV-5XucT8j4i8DM65inhgKP~vk4RTvnwhviIUoso05lOb2afNdwj3sYGQXc7FgIhdf3v7P8IfmF0jpEkzPY1xQgMvWGI2y01MrN3Q5OvVg8oDCS8fCSBFhTFRLQ__"
+          src="image/banner.jpg"
           alt=""
           className="w-full"
-          style={{ border: "2px soid #ddd", borderRadius: "6px", height: "6" }}
+          style={{ border: "2px soid #ddd", borderRadius: "6px", height: "600px" }}
         />
         <br />
         <br />
@@ -68,7 +68,7 @@ const Aboutpage = () => {
         </div>
         <div className="mt-10 flex">
           <img
-            src="https://s3-alpha-sig.figma.com/img/a11d/53fa/0dce339971752eb7827b7d2070e33201?Expires=1728259200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=KqX0Y26Qdsz4toDHREdzgcLL7SBGavm~S0BBMvbBgDQLEsk5InSS878x~z48By-RWGIE4uQTcB02lf2KtDmt-KdZ2TXRxQT643SjBVtB2Tl6SwDhmowFPop4fD9d~LHM1rWiS-0LaKQDFRrsugc0sdbrO6G~ynmO-fn5fAFaoHftF1gBGP2E4YngGmnGMMhZRtWKynG9jlQqyuX5-5JiJXD5thnOA56FoLQifaU760Tbvc2Y3vZW4ZYI6nRH3ECW4N2QOLOm9X3keTJyF60ZqegIPA-dtiLrxuQBuuJcmkd0ocBmefR8Vv-aqKoomjCOU9ZUxKhDez--s1MGGDHGrQ__"
+            src="image/housecontactt.jpg"
             width={624}
             height={408}
           ></img>
@@ -102,28 +102,28 @@ const Aboutpage = () => {
         <div className="flex justify-center ">
           <div className="mr-4 mt-4">
             <img
-              src="https://s3-alpha-sig.figma.com/img/a11d/53fa/0dce339971752eb7827b7d2070e33201?Expires=1728259200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=KqX0Y26Qdsz4toDHREdzgcLL7SBGavm~S0BBMvbBgDQLEsk5InSS878x~z48By-RWGIE4uQTcB02lf2KtDmt-KdZ2TXRxQT643SjBVtB2Tl6SwDhmowFPop4fD9d~LHM1rWiS-0LaKQDFRrsugc0sdbrO6G~ynmO-fn5fAFaoHftF1gBGP2E4YngGmnGMMhZRtWKynG9jlQqyuX5-5JiJXD5thnOA56FoLQifaU760Tbvc2Y3vZW4ZYI6nRH3ECW4N2QOLOm9X3keTJyF60ZqegIPA-dtiLrxuQBuuJcmkd0ocBmefR8Vv-aqKoomjCOU9ZUxKhDez--s1MGGDHGrQ__"
+              src="image/housecontact2.jpg"
               height={300}
               width={300}
             />
           </div>
           <div className="mr-4 mt-4">
             <img
-              src="https://s3-alpha-sig.figma.com/img/a11d/53fa/0dce339971752eb7827b7d2070e33201?Expires=1728259200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=KqX0Y26Qdsz4toDHREdzgcLL7SBGavm~S0BBMvbBgDQLEsk5InSS878x~z48By-RWGIE4uQTcB02lf2KtDmt-KdZ2TXRxQT643SjBVtB2Tl6SwDhmowFPop4fD9d~LHM1rWiS-0LaKQDFRrsugc0sdbrO6G~ynmO-fn5fAFaoHftF1gBGP2E4YngGmnGMMhZRtWKynG9jlQqyuX5-5JiJXD5thnOA56FoLQifaU760Tbvc2Y3vZW4ZYI6nRH3ECW4N2QOLOm9X3keTJyF60ZqegIPA-dtiLrxuQBuuJcmkd0ocBmefR8Vv-aqKoomjCOU9ZUxKhDez--s1MGGDHGrQ__"
+              src="image/housecontact3.jpg"
               height={300}
               width={300}
             />
           </div>
           <div className="mr-4 mt-4">
             <img
-              src="https://s3-alpha-sig.figma.com/img/a11d/53fa/0dce339971752eb7827b7d2070e33201?Expires=1728259200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=KqX0Y26Qdsz4toDHREdzgcLL7SBGavm~S0BBMvbBgDQLEsk5InSS878x~z48By-RWGIE4uQTcB02lf2KtDmt-KdZ2TXRxQT643SjBVtB2Tl6SwDhmowFPop4fD9d~LHM1rWiS-0LaKQDFRrsugc0sdbrO6G~ynmO-fn5fAFaoHftF1gBGP2E4YngGmnGMMhZRtWKynG9jlQqyuX5-5JiJXD5thnOA56FoLQifaU760Tbvc2Y3vZW4ZYI6nRH3ECW4N2QOLOm9X3keTJyF60ZqegIPA-dtiLrxuQBuuJcmkd0ocBmefR8Vv-aqKoomjCOU9ZUxKhDez--s1MGGDHGrQ__"
+              src="image/housecontact4.jpg"
               height={300}
               width={300}
             />
           </div>
           <div className="mr-4 mt-4">
             <img
-              src="https://s3-alpha-sig.figma.com/img/a11d/53fa/0dce339971752eb7827b7d2070e33201?Expires=1728259200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=KqX0Y26Qdsz4toDHREdzgcLL7SBGavm~S0BBMvbBgDQLEsk5InSS878x~z48By-RWGIE4uQTcB02lf2KtDmt-KdZ2TXRxQT643SjBVtB2Tl6SwDhmowFPop4fD9d~LHM1rWiS-0LaKQDFRrsugc0sdbrO6G~ynmO-fn5fAFaoHftF1gBGP2E4YngGmnGMMhZRtWKynG9jlQqyuX5-5JiJXD5thnOA56FoLQifaU760Tbvc2Y3vZW4ZYI6nRH3ECW4N2QOLOm9X3keTJyF60ZqegIPA-dtiLrxuQBuuJcmkd0ocBmefR8Vv-aqKoomjCOU9ZUxKhDez--s1MGGDHGrQ__"
+              src="image/housecontact5.jpg"
               height={300}
               width={300}
             />

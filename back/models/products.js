@@ -61,7 +61,7 @@ const ProductSchema = new mongoose.Schema(
     },
     { timestamps: true, versionKey: false }
 );
-ProductSchema.pre("save", function (next) {
+ProductSchema.pre("save", function(next){
     if (this.isModified("name")) {
         this.slug = slugify(this.name, { lower: true, strict: true });
     }

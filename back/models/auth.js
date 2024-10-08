@@ -1,72 +1,57 @@
 import mongoose from "mongoose";
-import mongoosePaginate from "mongoose-paginate-v2";
-import slugify from "slugify";
-
-const AuthSchema = new mongoose.Schema(
+import bcrypt from "bcrypt";
+import validator from 'validator';
+const UserSchema = new mongoose.Schema(
     {
-        name: {
+        username: {
             type: String,
             required: true,
+            unique: true,
             minlength: 3,
+        },
+        email: {
+            type: String,
+            required: true,
             unique: true,
+            validate: [validator.isEmail, "cần nhập đúng định dạng emai"],
         },
-        slug: {
-            type: String,
-            unique: true,
-        },
-        number_user: {
-            type: Number,
-            required: true,
-        },
-        image_url: {
+        password: {
             type: String,
             required: true,
+            minlength: 6,
         },
-        // attributes: [
-        //     {
-        //         type: mongoose.Schema.Types.ObjectId,
-        //         ref: "Attribute",
-        //         required: true,
-        //     },
-        // ],
-        phone_number: {
-            type: Number,
-            default: 1,
-        },
-        description: {
+        role: {
             type: String,
-        },
-        rating: {
-            type: Number,
-            min: 0,
-            max: 5,
-        },
-        reviews: {
-            type: Number,
-            default: 0,
-        },
-        // category: {
-        //     type: mongoose.Schema.Types.ObjectId,
-        //     ref: "Category",
-        // },
-        tags: [String],
-        sku: {
-            type: String,
-            required: true,
+            enum: ["customer", "admin"],
+            default: "customer",
         },
         status: {
             type: Boolean,
             default: true,
         },
+        lastLogin: {
+            type: Date,
+        },
+        resetPasswordToken: {
+            type: String,
+        },
+        resetPasswordExpires: {
+            type: Date,
+        },
     },
     { timestamps: true, versionKey: false }
 );
-AuthSchema.pre("save", function (next) {
-    if (this.isModified("name")) {
-        this.slug = slugify(this.name, { lower: true, strict: true });
+// Phương thức để kiểm tra mật khẩu
+UserSchema.methods.comparePassword = async function (password) {
+    // Sử dụng bcrypt để so sánh mật khẩu
+    return await bcrypt.compare(password, this.password);
+};
+// Middleware để mã hóa mật khẩu trước khi lưu
+UserSchema.pre("save", async function (next) {
+    if (this.isModified("password") || this.isNew) {
+        const salt = await bcrypt.genSalt(10);
+        this.password = await bcrypt.hash(this.password, salt);
     }
     next();
 });
-// Thêm plugin mongoose-paginate-v2 để hỗ trợ phân trang nice
-AuthSchema.plugin(mongoosePaginate);
-export const Auth=mongoose.model('Auth',AuthSchema);
+export const User=mongoose.model("User", UserSchema);

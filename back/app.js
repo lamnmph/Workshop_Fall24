@@ -5,8 +5,10 @@ import morgan from "morgan";
 import mongoose from 'mongoose';
 import fs from "fs";
 import path from "path";
+import bcrypt from 'bcrypt';
 import { fileURLToPath } from "url";
 import authRouter from './routers/auth.js';
+import categoryRouter from './routers/categories.js';
 const __filename = fileURLToPath(import.meta.url); // Lấy đường dẫn file hiện tại
 const __dirname = path.dirname(__filename); // Lấy đường dẫn thư mục chứa file hiện tại
 
@@ -23,7 +25,7 @@ const loadRoutes = async () => {
 };
 
 loadRoutes().catch((error) => {
-    console.error("Error loading routes:", error); // Xử lý lỗi nếu có
+    console.error("lỗi : ", error); // Xử lý lỗi nếu có
 });
 // 
 const app = express();
@@ -31,9 +33,9 @@ app.use(cors());
 app.use(express.json());
 app.use(morgan("tiny")); // Ghi lại các yêu cầu HTTP
 app.use('/api',productRouter);
+app.use('/api',categoryRouter)
 app.use('/auth',authRouter);
 mongoose.connect("mongodb://localhost:27017/Workshop");
 export const viteNodeApp =app;
-// đăng kí, nhập token,check quyền midleware
-// category
-// produc oce
+// 
+
