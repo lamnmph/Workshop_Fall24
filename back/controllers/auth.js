@@ -41,6 +41,7 @@ export const login = async (req, res) => {
 
       // Trả về token và thông tin người dùng
       res.status(200).json({
+        // token,
           user: { id: user._id, email: user.email, role: user.role },
       });
   } catch (error) {

@@ -1,4 +1,4 @@
-import {Navigate,Route, Routes } from "react-router-dom";
+import {Navigate,Route, Routes, useNavigate } from "react-router-dom";
 import "./App.css";
 import LayoutWebsite from "./pages/(website)/layout";
 import HomePage from "./pages/(website)/home/page";
@@ -26,8 +26,8 @@ function App() {
             <Routes>
                 <Route path="/" element={<LayoutWebsite />}>
                     <Route index element={<HomePage/>} />
-                    <Route path="signup" element={<SignupPage/>} />
-                    <Route path="/auth/login" element={<SigninPage/>} />
+                    <Route path="/auth/signup" element={<SignupPage/>} />
+                    <Route path="/auth/login" element={<SigninPage />} />
                     <Route path="shop" element={<Shoppage/>}/>
                     <Route path="shop2" element={<Shoppage2/>}/>
                     <Route path="shop3" element={<Shoppage3/>}/>

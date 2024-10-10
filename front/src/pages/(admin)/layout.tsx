@@ -46,6 +46,7 @@ const LayoutAdmin: React.FC = () => {
             items={[{ title: "Trang chủ" }, { title: "admin" }, { title: "dashboard" }]}
             style={{ margin: "16px 0" }}
           />
+          <Link to={`dashboard/product/add`}><button className="font-bold flex border px-2 py-2 bg-yellow-300 rounded-lg">Thêm sản phẩm</button></Link>
           <Content
             style={{
               padding: 24,
@@ -53,10 +54,11 @@ const LayoutAdmin: React.FC = () => {
               minHeight: 280,
               background: colorBgContainer,
               borderRadius: borderRadiusLG,}}>
-            Danh sách sản phẩm (produc oce)
-            {/* <Link to={`dashboard/product/add`}><button className="font-bold flex border px-2 py-2 bg-yellow-300">Thêm sản phẩm</button></Link> */}
+            Danh sách sản phẩm product
+            
             <br/>
             <Outlet/>   
+            <Link to={`/`}><button className="font-bold flex border px-2 py-2 rounded-lg">Trang chủ</button></Link>
           </Content>
         </Layout>
       </Layout>

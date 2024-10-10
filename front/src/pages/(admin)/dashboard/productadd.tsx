@@ -1,12 +1,14 @@
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import axios from "axios";
 import { useState } from "react";
+import { Link } from 'react-router-dom';
 interface NewProduct {
     name: string;
     price: number;
     description: string;
-    isBuy: boolean;
+    status: boolean;
     image: string;
+    quantity:number,
   }
 const Productaddpage = () => {
     const [newProduct, setNewProduct] = useState<NewProduct>({
@@ -43,35 +45,41 @@ const Productaddpage = () => {
       };
 
       return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className='form-group'>
           <div>
-            <label>Tên sản phẩm:</label>
-            <input type="text" name="name" value={newProduct.name} onChange={handleChange} required placeholder="nhập tên sp"
+            <label className='form-label'>Tên sản phẩm:</label>
+            <input type="text" name="name" value={newProduct.name} onChange={handleChange} required placeholder="nhập tên sp" className='form-control'
             />
           </div>
           <div>
-            <label>Giá sản phẩm:</label>
-            <input type="number" name="price" value={newProduct.price} onChange={handleChange} required placeholder="nhập giá sp"
+            <label  className='form-label'>Giá sản phẩm:</label>
+            <input type="number" name="price" value={newProduct.price} onChange={handleChange} required placeholder="nhập giá sp" className='form-control'
             />
           </div>
           <div>
-            <label>Mô tả:</label>
-            <input type="text" name="description" value={newProduct.description} onChange={handleChange} required placeholder="nhập mô tả sp"
+            <label  className='form-label'>Số lượng sản phẩm:</label>
+            <input type="number" name="quantity" value={newProduct.quantity} onChange={handleChange} required placeholder="nhập số lượng sp" className='form-control'
             />
           </div>
           <div>
-            <label>Trạng thái:</label>
-            <input type="checkbox" name="isBuy" checked={newProduct.isBuy}
-              onChange={(e) => setNewProduct((prev) => ({ ...prev, isBuy: e.target.checked }))}
+            <label className='form-label' >Mô tả:</label>
+            <input type="text" name="description" value={newProduct.description} onChange={handleChange} required placeholder="nhập mô tả sp" className='form-control'
+            />
+          </div>
+          <div>
+            <label className='form-label'>Trạng thái:</label>
+            <input type="checkbox" name="status" checked={newProduct.status}
+              onChange={(e) => setNewProduct((prev) => ({ ...prev, status: e.target.checked }))}
             />{" "}
-            Còn hàng
+            còn
           </div>
           <div>
-            <label>Hình ảnh (URL):</label>
-            <input type="text" name="image" value={newProduct.image} onChange={handleChange} required placeholder="nhập hình ảnh sp"
+            <label className='form-label'>Hình ảnh (URL):</label>
+            <input type="text" name="image" value={newProduct.image} onChange={handleChange} required placeholder="nhập hình ảnh sp" className='form-control'
             />
           </div><br/>
-          <button type="submit" className="font-bold border px-3 py-3">Thêm sản phẩm</button>
+          <button type="submit" className="font-bold border px-3 py-3 rounded-lg bg-yellow-400">Thêm sản phẩm</button> <br/>
+          <Link to={`/admin/dashboard`}><button className='btn btn primary'>trở về</button></Link>
         </form>
       );
 };

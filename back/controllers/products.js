@@ -93,3 +93,15 @@ export const deleteProduct = async (req, res) => {
         res.status(500).json({ message: error.message }); // Xử lý lỗi và trả về phản hồi lỗi
     }
 };
+export const getProductWithCategoryId=async(req,res)=>{
+  try{
+    const {id}=req.params;
+    const product =await Product.findOne(id).populate('category');
+    if (!product) {
+      return res.status(404).json({ message: "Không tìm thấy not found" }); // Trả về lỗi nếu không tìm thấy sản phẩm
+  }
+  }catch(error){
+    console.log(error);
+    
+  }
+}

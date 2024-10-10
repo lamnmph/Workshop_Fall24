@@ -4,32 +4,64 @@
       "id": 2,
       "name": "new produc 0002",
       "price": 222,
+      "quantity": 123123,
       "description": "product description vcl",
-      "image": "https://picsum.photos/id/200/200/200"
+      "image": "https://picsum.photos/id/200/200/200",
+      "status": false
     },
     {
       "id": 3,
       "name": "Sản phẩm đã được edit",
       "price": 222,
+      "quantity": 123123,
       "description": "product description vcl",
       "image": "https://picsum.photos/id/200/200/200",
-      "isBuy": true
+      "status": true
     },
     {
       "name": "product name 123",
       "price": 123123,
+      "quantity": 123123,
       "description": "123132",
-      "isBuy": false,
+      "status": false,
       "image": "http://picsum.photos/id/44/200/200",
       "id": 4
     },
     {
       "name": "product name 123",
       "price": 123123,
+      "quantity": 123123,
       "description": "123132",
-      "isBuy": true,
+      "status": true,
       "image": "http://picsum.photos/id/44/200/200",
       "id": 5
+    },
+    {
+      "name": "product new",
+      "price": 123123,
+      "description": "Ghế vip đê",
+      "isBuy": false,
+      "image": "http://picsum.photos/id/345/200/200",
+      "quantity": "22222",
+      "status": true,
+      "id": 7
+    }
+  ],
+  "users": [
+    {
+      "email": "admin1@gmail.com",
+      "password": "$2a$10$yqTJSBJ0dC1Iz2A9tI2BD.CjvXUOGrQmIiSqQdXkRQgePDzcfCqsW",
+      "id": 1
+    },
+    {
+      "email": "admin002@gmail.com",
+      "password": "$2a$10$aNkL7p4oXVy2zn.FFCsQ/.hd6C8t8iRyIDmoLi3cr7e7Bi9hKmr32",
+      "id": 2
+    },
+    {
+      "email": "username1@gmail.com",
+      "password": "$2a$10$iwoxnqzxM2xruwjI2UZ3BeGYVaTNfUTw6ufmwYQ.7eBP1Oe9XPVqi",
+      "id": 3
     }
   ]
 }

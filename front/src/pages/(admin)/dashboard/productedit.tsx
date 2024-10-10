@@ -1,7 +1,7 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 interface Product {
     name: string;
@@ -62,58 +62,59 @@ const Producteditpage=()=> {
     }
   
     return (
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="form-group">
         <div>
-          <label>Tên sản phẩm:</label>
+          <label className="form-label">Tên sản phẩm:</label>
           <input
             type="text"
             name="name"
             value={editedProduct.name}
             onChange={handleChange}
-            required
+            required className="form-control"
           />
         </div>
         <div>
-          <label>Giá sản phẩm:</label>
+          <label className="form-label">Giá sản phẩm:</label>
           <input
             type="number"
             name="price"
             value={editedProduct.price}
             onChange={handleChange}
-            required
-          />
+            required className="form-control"
+          /> 
         </div>
         <div>
-          <label>Mô tả:</label>
+          <label className="form-label">Mô tả:</label>
           <input
             type="text"
             name="description"
             value={editedProduct.description}
             onChange={handleChange}
-            required
+            required className="form-control"
           />
         </div>
         <div>
-          <label>Trạng thái:</label>
+          <label className="form-label">Trạng thái:</label>
           <input
             type="checkbox"
             name="isBuy"
             checked={editedProduct.isBuy}
-            onChange={(e) => setEditedProduct((prev) => ({ ...prev, isBuy: e.target.checked }))}
+            onChange={(e) => setEditedProduct((prev) => ({ ...prev, isBuy: e.target.checked }))} className="mt-2"
           />{" "}
-          Còn hàng
+          còn
         </div>
         <div>
-          <label>Hình ảnh (URL):</label>
+          <label className="form-label">Hình ảnh (URL):</label>
           <input
             type="text"
             name="image"
             value={editedProduct.image}
             onChange={handleChange}
-            required
+            required className="form-control"
           />
         </div><br/>
-        <button type="submit" className="px-3 py-3 font-bold border">Cập nhật sản phẩm</button>
+        <button type="submit" className="px-3 py-3 font-bold rounded-lg bg-yellow-400 border">sửa sản phẩm</button><br/>
+        <Link to={`/admin/dashboard`}><button className='btn btn primary'>trở về</button></Link>
       </form>
     );
 };
